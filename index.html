@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Educational Video Stack 2026</title>
+<style>
+  :root{
+    --bg:#0f1117; --card:#171a23; --card2:#1c2030; --line:#2a2f40;
+    --ink:#eef1f7; --muted:#9aa3b8; --accent:#6ea8fe; --accent2:#7ef0c4;
+    --warn:#ffd07a;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:32px 20px 64px}
+  header{padding:28px 0 8px}
+  .kicker{color:var(--accent2); font-weight:700; letter-spacing:.08em; text-transform:uppercase; font-size:12px}
+  h1{font-size:clamp(26px,5vw,40px); line-height:1.1; margin:.25em 0 .15em}
+  .sub{color:var(--muted); font-size:16px; max-width:62ch}
+  .tldr{
+    margin:28px 0; background:linear-gradient(135deg,#1a2030,#171a23);
+    border:1px solid var(--line); border-radius:16px; padding:22px 22px 8px;
+  }
+  .tldr h2{margin:0 0 4px; font-size:18px}
+  .cost{color:var(--accent2); font-weight:700}
+  .tablewrap{overflow-x:auto; margin:14px 0 8px}
+  table{width:100%; border-collapse:collapse; min-width:560px}
+  th,td{text-align:left; padding:12px 12px; border-bottom:1px solid var(--line); vertical-align:top; font-size:14.5px}
+  th{color:var(--muted); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:.05em}
+  td b{color:var(--accent)}
+  .pill{display:inline-block; background:var(--card2); border:1px solid var(--line); color:var(--accent2);
+    padding:2px 10px; border-radius:999px; font-size:13px; font-weight:600; white-space:nowrap}
+  section{margin:34px 0}
+  h2.step{font-size:22px; display:flex; align-items:center; gap:12px; margin:0 0 6px}
+  .num{display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px;
+    border-radius:9px; background:var(--accent); color:#0b1020; font-weight:800; font-size:15px; flex:none}
+  .lead{color:var(--muted); margin:0 0 14px; max-width:70ch}
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:13px; padding:15px 16px}
+  .card.pick{border-color:var(--accent2); box-shadow:0 0 0 1px var(--accent2) inset}
+  .card .tag{font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--accent2)}
+  .card h3{margin:5px 0 4px; font-size:16px}
+  .card p{margin:0; color:var(--muted); font-size:13.5px}
+  .card .price{display:block; margin-top:8px; color:var(--ink); font-weight:700; font-size:14px}
+  .pickline{margin:14px 0 0; padding:11px 14px; background:#15291f; border:1px solid #2e5a45;
+    border-radius:10px; font-size:14.5px}
+  .pickline b{color:var(--accent2)}
+  .note{margin-top:12px; padding:11px 14px; background:#2a2410; border:1px solid #5a4d1f;
+    border-radius:10px; font-size:14px; color:#ffe3a8}
+  .path{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px}
+  .path ol{margin:8px 0 0; padding-left:22px}
+  .path li{margin:9px 0; font-size:15px}
+  .total{margin-top:16px; font-size:17px}
+  .total .cost{font-size:20px}
+  footer{margin-top:40px; border-top:1px solid var(--line); padding-top:18px; color:var(--muted); font-size:12.5px}
+  footer a{color:var(--accent); text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  details{margin-top:8px}
+  summary{cursor:pointer; color:var(--accent); font-size:13.5px}
+  .srcgrid{columns:2; column-gap:24px; margin-top:10px}
+  @media(max-width:560px){.srcgrid{columns:1}}
+  .srcgrid a{display:block; margin:5px 0; break-inside:avoid; font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Tool Stack · 2026</div>
+    <h1>Beginner-Friendly AI Stack for Educational Video</h1>
+    <p class="sub">An affordable, easy-to-start toolset for creating teaching videos with <strong>your own face and voice</strong> — covering scripting, video, audio, captions, and visual aids.</p>
+  </header>
+
+  <div class="tldr">
+    <h2>TL;DR — The Recommended Stack</h2>
+    <p class="sub">Total: <span class="cost">~$60–80/month</span> &nbsp;·&nbsp; you can start near <span class="cost">$0</span> while testing.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Need</th><th>Recommended tool</th><th>Why</th><th>Cost</th></tr></thead>
+        <tbody>
+          <tr><td><b>1.</b> Content / script generation</td><td><b>Claude</b> (or ChatGPT)</td><td>Best at structured lesson scripts, outlines, analogies</td><td><span class="pill">$0–20/mo</span></td></tr>
+          <tr><td><b>2.</b> Video with your face + voice</td><td><b>Argil</b> or HeyGen</td><td>Clone yourself from 2 min of footage, then type-to-video</td><td><span class="pill">$29–39/mo</span></td></tr>
+          <tr><td><b>3.</b> Audio cleanup</td><td><b>Adobe Podcast Enhance</b> + Auphonic</td><td>Near-studio voice from a laptop mic, free</td><td><span class="pill">$0</span></td></tr>
+          <tr><td><b>4.</b> Subtitles + visual effects</td><td><b>Submagic</b></td><td>Animated word-level captions, emojis, b-roll, 99% accurate</td><td><span class="pill">$12–23/mo</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <section>
+    <h2 class="step"><span class="num">1</span> Content generation</h2>
+    <p class="lead">The script is everything for educational content. Use a general LLM rather than a dedicated "video script generator" SaaS — cheaper and far more flexible.</p>
+    <div class="cards">
+      <div class="card pick"><span class="tag">Pick</span><h3>Claude</h3><p>Strongest for clear explanations, step-by-step breakdowns, and teaching analogies. Free tier usable.</p><span class="price">$0–20/mo</span></div>
+      <div class="card"><span class="tag">Alternative</span><h3>ChatGPT</h3><p>Comparable quality and price.</p><span class="price">$20/mo</span></div>
+      <div class="card"><span class="tag">Skip</span><h3>Jasper / Copy.ai</h3><p>Cost more and do less for teaching content unless you want templates.</p><span class="price">$39+/mo</span></div>
+    </div>
+    <p class="pickline">Prompt for: <b>hook → learning objectives → segmented script with on-screen text cues.</b></p>
+  </section>
+
+  <section>
+    <h2 class="step"><span class="num">2</span> Video with your face + voice</h2>
+    <p class="lead">This is the core piece. Two clear tiers depending on whether you want "be on camera without filming" or multilingual lessons.</p>
+    <div class="cards">
+      <div class="card pick"><span class="tag">Best fit</span><h3>Argil</h3><p>Clone yourself from a 2-min recording (face, voice, mannerisms), then generate by typing. Built for "record once, post daily."</p><span class="price">$29–39/mo</span></div>
+      <div class="card"><span class="tag">Mainstream</span><h3>HeyGen</h3><p>Polished, excellent lip-sync (Avatar IV), 70+ language localization. Heavy use ~$59/mo.</p><span class="price">$24–29/mo</span></div>
+      <div class="card"><span class="tag">Short-form</span><h3>Captions AI (Mirage)</h3><p>Natural, influencer-style avatars.</p><span class="price">varies</span></div>
+      <div class="card"><span class="tag">Cheapest</span><h3>D-ID</h3><p>Quick clips, lower realism.</p><span class="price">$5.99/mo</span></div>
+    </div>
+    <p class="pickline"><b>Argil</b> if the goal is "be on camera without filming every time." <b>HeyGen</b> if you want multilingual versions of each lesson.</p>
+    <p class="note">⚠️ Reality check: AI avatars shine for talking-head segments. For hands-on demos, record yourself normally and use the avatar only for intros/recaps — it usually looks better.</p>
+  </section>
+
+  <section>
+    <h2 class="step"><span class="num">3</span> Audio processing (clarity)</h2>
+    <p class="lead">Makes spoken content crisp and consistent. Most relevant when you record real footage — a cloned voice from Argil/HeyGen is already clean.</p>
+    <div class="cards">
+      <div class="card pick"><span class="tag">Start here · free</span><h3>Adobe Podcast Enhance</h3><p>Browser-based, removes echo/noise, makes a laptop mic sound near-studio.</p><span class="price">$0</span></div>
+      <div class="card"><span class="tag">Add for polish</span><h3>Auphonic</h3><p>Automatic loudness leveling to broadcast standards (LUFS) for consistent episodes.</p><span class="price">Free 2 hrs/mo</span></div>
+      <div class="card"><span class="tag">All-in-one</span><h3>Descript Studio Sound</h3><p>Editing + audio cleanup in one app.</p><span class="price">$12+/mo</span></div>
+    </div>
+    <p class="pickline">Adobe Enhance (free) → add <b>Auphonic</b> when you want consistency across videos.</p>
+  </section>
+
+  <section>
+    <h2 class="step"><span class="num">4</span> Subtitles + visual effects</h2>
+    <p class="lead">One tool covers both captions and learning-aid visuals — then add an explainer tool for concept diagrams.</p>
+    <div class="cards">
+      <div class="card pick"><span class="tag">Pick</span><h3>Submagic</h3><p>Auto-captions (99%), animated word-level highlighting, emoji insertion, auto b-roll, and zoom/effect suggestions.</p><span class="price">$12–23/mo</span></div>
+      <div class="card"><span class="tag">Editor combo</span><h3>Kapwing / VEED</h3><p>Captions + light editing in one place.</p><span class="price">$12+/mo</span></div>
+      <div class="card"><span class="tag">Concepts</span><h3>Simpleshow</h3><p>Text → whiteboard animated explainers, great for ideas.</p><span class="price">varies</span></div>
+      <div class="card"><span class="tag">B-roll / cinematic</span><h3>Runway · Sora · Veo</h3><p>High-quality AI b-roll to illustrate ideas.</p><span class="price">$12+/mo</span></div>
+      <div class="card"><span class="tag">Free</span><h3>UniFab / YouTube Studio</h3><p>~95% captions, watermark-free (UniFab).</p><span class="price">$0</span></div>
+    </div>
+    <p class="pickline"><b>Submagic</b> for captions + dynamic visual aids; add <b>Simpleshow</b> for whiteboard-style concept animations.</p>
+  </section>
+
+  <section class="path">
+    <h2 class="step" style="font-size:20px"><span class="num" style="background:var(--accent2)">▶</span> Lowest-friction path to start</h2>
+    <ol>
+      <li><b>Claude / ChatGPT</b> ($0–20) → write the lesson script.</li>
+      <li><b>Argil</b> (~$39) → generate the talking-head video from your cloned self.</li>
+      <li><b>Adobe Podcast Enhance</b> ($0) → only if you record real footage/demos.</li>
+      <li><b>Submagic</b> ($12–23) → captions, b-roll, and visual emphasis.</li>
+    </ol>
+    <p class="total">Start free on #1 and #3, trial #2 and #4, then commit. A full educational pipeline runs <span class="cost">~$50–80/month</span>.</p>
+  </section>
+
+  <footer>
+    <strong>Sources</strong>
+    <details open>
+      <summary>Research references (2026)</summary>
+      <div class="srcgrid">
+        <a href="https://www.synthesia.io/post/heygen-alternatives-competitors">Synthesia — HeyGen alternatives 2026</a>
+        <a href="https://www.argil.ai/blog/whats-the-latest-2025-pricing-for-heygen-plus-how-it-compares-to-synthesia-argil-keywords-heygen-pricing">Argil — pricing vs HeyGen/Synthesia</a>
+        <a href="https://www.argil.ai/blog/how-do-leading-ai-avatar-services-compare-on-pricing-in-2026">Argil — avatar service pricing 2026</a>
+        <a href="https://traksource.com/argil-ai-review/">Traksource — Argil review 2026</a>
+        <a href="https://www.ezugc.ai/blog/heygen-review">EzUGC — HeyGen review 2026</a>
+        <a href="https://www.forasoft.com/blog/article/ai-driven-educational-content-creation">Forasoft — AI tools for education 2026</a>
+        <a href="https://www.capcut.com/resource/top-7-ai-audio-enhancement-tools-for-podcast">CapCut — AI audio enhancement 2026</a>
+        <a href="https://www.opus.pro/blog/best-ai-audio-denoise-echo-removal-tools">OpusClip — audio denoise tools 2026</a>
+        <a href="https://www.opus.pro/blog/best-ai-subtitle-generators">OpusClip — AI subtitle generators 2026</a>
+        <a href="https://max-productive.ai/ai-tools/submagic/">Submagic review 2026</a>
+        <a href="https://leadde.ai/blog/best-ai-lecture-video-makers">Leadde — AI lecture video makers 2026</a>
+        <a href="https://www.opus.pro/blog/best-ai-b-roll-generators-short-form-video">OpusClip — AI b-roll generators 2026</a>
+      </div>
+    </details>
+    <p style="margin-top:14px">Prices are approximate and current as of mid-2026; verify on each vendor's site before subscribing.</p>
+  </footer>
+</div>
+</body>
+</html>
